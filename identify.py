@@ -1,7 +1,7 @@
 import sys
 import subprocess
-
-document = subprocess.check_output(['curl','-i','-F','name=test','-F','imagefile=@/home/ubuntu/dl/RPi_CaffeQuery/test.jpeg','http://demo.caffe.berkeleyvision.org/classify_upload'])
+pwd = subprocess.check_output("pwd")
+document = subprocess.check_output(['curl','-i','-F','name=test','-F','imagefile=@$PWD/test.jpeg','http://demo.caffe.berkeleyvision.org/classify_upload'])
 a = 0
 b = 0
 for i in range (0, 10):
