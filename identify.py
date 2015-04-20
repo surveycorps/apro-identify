@@ -1,6 +1,5 @@
 import sys
 import subprocess
-pwd = subprocess.check_output("pwd")
 document = subprocess.check_output(['curl','-i','-F','name=picture','-F','imagefile=@$PWD/picture.jpeg','http://demo.caffe.berkeleyvision.org/classify_upload'])
 a = 0
 b = 0
