@@ -2,9 +2,9 @@ import subprocess
 import requests
 
 def recognize():
-    subprocess.call("streamer -f -o picture.jpeg")
+    subprocess.call("streamer -f jpeg -o picture.jpeg", shell=True)
     url = "http://demo.caffe.berkeleyvision.org/classify_upload"
-    img = {'name': 'picture','imagefile': open('picture.jpg', 'rb')}
+    img = {'name': 'picture','imagefile': open('picture.jpeg', 'rb')}
     r = requests.post(url, files=img)
     document = r.text
 
